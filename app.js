@@ -13,5 +13,6 @@ for(const img of images){
 function hidePreview(target){
   target.style.visibility = "hidden";
   target.style.opacity = 0;
+  previewImage.removeAttribute("src");
   document.body.style.overflowY = "auto";
 }

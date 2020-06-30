@@ -10,7 +10,7 @@
   font-size: 18px;
   user-select: none;
 
-  --border-radius: 1rem;
+  --border-radius: .25rem;
 }
 
 body{
@@ -63,28 +63,35 @@ a:hover{
 }
 
 .container{
-  width: 85%;
+  width: 90%;
   margin-top: 2rem;
   flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: 700px;
-  grid-gap: 1.5rem;
+  grid-auto-rows: 500px;
+  grid-gap: 1rem;
 }
 
 .container > img{
   width: 100%;
   height: 100%;
   border-radius: var(--border-radius);
-  box-shadow: 0 2px 32px rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 1rem rgba(0, 0, 0, .15);
   object-fit: cover;
   cursor: pointer;
+  transition: transform .2s ease-in-out;
+  will-change: transform;
+}
+
+.container > img:hover{
+  box-shadow: 0 2px 2rem rgba(0, 0, 0, .15);
+  transform: scale(1.05);
 }
 
 .preview{
   width: 100vw;
   height: 100vh;
-  background-color: #0007;
+  background-color: #000A;
   display: flex;
   visibility: hidden;
   justify-content: center;
